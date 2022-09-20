@@ -116,9 +116,30 @@ function contarRepetidos(lista){
 
     var ordenarArray = ordenarListaBi(listaArray);
 
-    //Una vez ordenada la ultima pos es la moda 
+    //Una vez ordenada la ultima pos es la moda
     var moda = listaArray[listaArray.length - 1][0];
 
     console.log({listaArray, ordenarArray, moda});
 
 };
+
+
+//Media Armonica
+var valoresEnter = [15,17,14,13,12];
+
+var acumulado = 0;
+
+function mediaArmonica(array){
+    for(var i=0;i<array.length;i++){
+        acumulado = acumulado + (1/array[i]);
+    };
+
+    var h = array.length / acumulado;
+
+    return h;
+
+};
+
+var imprimir = mediaArmonica(valoresEnter);
+
+console.log(imprimir);
