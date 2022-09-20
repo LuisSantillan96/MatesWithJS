@@ -1,8 +1,11 @@
+const PlatziMath = {};
+
+
 var arreglo = [9, 9];
 
 var suma = 0;
 
-function sumar(){
+PlatziMath.sumar = function sumar(){
     for(var i=0;i<arreglo.length;i++){
         suma = suma + arreglo[i];
     };
@@ -15,7 +18,7 @@ console.log(promedio);
 
 //Promedio mediante el reduce
 
-function sumaF(valorAcumulado, valorAcual){
+PlatziMath.sumaF =  function sumaF(valorAcumulado, valorAcual){
     return valorAcumulado + valorAcual;
 };
 
@@ -28,14 +31,14 @@ console.log(sumaLista);
 var lista = [10,20,30,40];
 
 //Valida si un arreglo es par o impar en segun su n elementos
-function esPar(lista){
+PlatziMath.esPar =  function esPar(lista){
     return !(lista.length%2);  //Valida si es par y devuelve True
 };
 
 //console.log(esPar(lista));
 
 //Funcion que calcula la mediana
-function calcularMediana(lista){
+PlatziMath.calcularMediana = function calcularMediana(lista){
     var validacionPar = esPar(lista);
     var posicion;
     var mediana;
@@ -59,7 +62,7 @@ calcularMediana(lista);
 
 //Ordenar un array
 //Ordena un arrgelo con sort
-function ordenarLista(listaDesordenada){
+PlatziMath.ordenarLista = function ordenarLista(listaDesordenada){
     function ordenarListaSort(valorAcumulado, nvoValor){
 
         // if(valorAcumulado > nvoValor){
@@ -85,7 +88,7 @@ console.log(listaa.sort());
 
 //Moda
 //Esta funcion ordena un arreglo de arreglos
-function ordenarListaBi(listaDesordenada){
+PlatziMath.ordenarListaBi = function ordenarListaBi(listaDesordenada){
     function ordenarListaSort(valorAcumulado, nvoValor){
 
         return valorAcumulado[1] - nvoValor[1];
@@ -96,7 +99,7 @@ function ordenarListaBi(listaDesordenada){
 };
 
 //Esta funcion crea un objeto de elementos y cuantas veces se repite
-function contarRepetidos(lista){
+PlatziMath.contarRepetidos = function contarRepetidos(lista){
     var obj = {};
     var elemento;
 
@@ -129,7 +132,7 @@ var valoresEnter = [15,17,14,13,12];
 
 var acumulado = 0;
 
-function mediaArmonica(array){
+PlatziMath.mediaArmonica = function mediaArmonica(array){
     for(var i=0;i<array.length;i++){
         acumulado = acumulado + (1/array[i]);
     };
