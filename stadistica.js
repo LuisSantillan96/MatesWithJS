@@ -11,9 +11,9 @@ PlatziMath.sumar = function sumar(){
     };
 };
 
-sumar();
-var promedio = suma / arreglo.length;
-console.log(promedio);
+//sumar();
+// var promedio = suma / arreglo.length;
+// console.log(promedio);
 
 
 //Promedio mediante el reduce
@@ -22,8 +22,8 @@ PlatziMath.sumaF =  function sumaF(valorAcumulado, valorAcual){
     return valorAcumulado + valorAcual;
 };
 
-var sumaLista = arreglo.reduce(sumaF);
-console.log(sumaLista);
+// var sumaLista = arreglo.reduce(sumaF);
+// console.log(sumaLista);
 
 
 // Lista par o impar
@@ -39,7 +39,7 @@ PlatziMath.esPar =  function esPar(lista){
 
 //Funcion que calcula la mediana
 PlatziMath.calcularMediana = function calcularMediana(lista){
-    var validacionPar = esPar(lista);
+    var validacionPar = PlatziMath.esPar(lista);
     var posicion;
     var mediana;
 
@@ -48,17 +48,17 @@ PlatziMath.calcularMediana = function calcularMediana(lista){
         //console.log(posicion);
         var nvaPos = posicion - 1;
         mediana = (lista[posicion] + lista[nvaPos]) / 2;
-        console.log(mediana);
+        return mediana;
 
     }else{
         posicion = Math.floor(lista.length / 2);
         //console.log(posicion);
         mediana = lista[posicion];
-        console.log(mediana);
+        return mediana;
     };
 };
 
-calcularMediana(lista);
+//calcularMediana(lista);
 
 //Ordenar un array
 //Ordena un arrgelo con sort
@@ -82,8 +82,8 @@ PlatziMath.ordenarLista = function ordenarLista(listaDesordenada){
     return listaOrdenada;
 };
 
-listaa = [3,2,1,6,8,3];
-console.log(listaa.sort());
+//listaa = [3,2,1,6,8,3];
+//console.log(listaa.sort());
 
 
 //Moda
@@ -128,11 +128,13 @@ PlatziMath.contarRepetidos = function contarRepetidos(lista){
 
 
 //Media Armonica
-var valoresEnter = [15,17,14,13,12];
+//var valoresEnter = [15,17,14,13,12];
 
-var acumulado = 0;
+
 
 PlatziMath.mediaArmonica = function mediaArmonica(array){
+    var acumulado = 0;
+
     for(var i=0;i<array.length;i++){
         acumulado = acumulado + (1/array[i]);
     };
@@ -143,6 +145,6 @@ PlatziMath.mediaArmonica = function mediaArmonica(array){
 
 };
 
-var imprimir = mediaArmonica(valoresEnter);
+//var imprimir = mediaArmonica(valoresEnter);
 
-console.log(imprimir);
+//console.log(imprimir);
