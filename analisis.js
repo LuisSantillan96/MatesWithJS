@@ -130,6 +130,11 @@ function medianaTopTen(){
 
     const medianasOrdenadas = PlatziMath.ordenarLista(listaDeMedianas);
 
+    const cantidadDeElementos = medianasOrdenadas.length / 10;
+    const limite = listaMedianas.length - cantidadDeElementos;
+
+    const topTen = medianasOrdenadas.slice(limite, listaMedianas.length);
+
     console.log({listaDeMedianas, medianasOrdenadas})
 
 };
